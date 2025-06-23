@@ -5,8 +5,9 @@ import { Routes, Route, useNavigate} from 'react-router-dom';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import CreateForm from './Pages/CreateForm';
-import { auth } from '../Firebase-config';
+import EditPost from './Pages/EditPost';
 import { signOut } from "firebase/auth";
+import { db, auth } from '../Firebase-config';
 import Register from './Pages/Register';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -42,7 +43,8 @@ const App = () => {
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />}/>
         <Route path="/register" element={<Register setIsAuth={setIsAuth} />}/>
         <Route path="/reset" element={<ResetPassword setIsAuth={setIsAuth}/>} />
-        <Route path='/create-post' element={<CreateForm  />} />
+        <Route path='/create-post' element={<CreateForm isAuth={isAuth} />} />
+        <Route path='/edit-post/:id' element={<EditPost />} />
 
       </Routes>
 
