@@ -2,16 +2,16 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import { Routes, Route, useNavigate} from 'react-router-dom';
-import Home from './Pages/Home';
-import Login from './Pages/Login';
-import CreateForm from './Pages/CreateForm';
-import EditPost from './Pages/EditPost';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import CreateForm from './pages/CreateForm';
+import EditPost from './pages/EditPost';
 import { signOut } from "firebase/auth";
 import { db, auth } from '../Firebase-config';
-import Register from './Pages/Register';
+import Register from './pages/Register';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ResetPassword from './Pages/ResetPassword';
+import ResetPassword from './pages/ResetPassword';
 
 const App = () => {
 
